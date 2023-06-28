@@ -9,7 +9,7 @@ function MainArea() {
     return (
         <MainAreaStyled>
             <video src={business} muted playsInline autoPlay loop></video>
-            {<img src={circles} className="overlay" />}
+            {<img src={circles} className="overlay" alt = ""/>}
             <InnerLayout>
                 <MainContent />
             </InnerLayout>
@@ -28,7 +28,7 @@ const MainAreaStyled = styled.header`
         position: absolute;
         right: -400px;
         top: -300px;
-        
+
     }
     video{
         width: 100%;

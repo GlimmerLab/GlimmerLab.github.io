@@ -10,19 +10,19 @@ function Navigation() {
             </div>
             <ul className="nav-items">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="!#">Home</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="!#">About</a>
                 </li>
                 <li>
-                    <a href="#">FAQs</a>
+                    <a href="!#">FAQs</a>
                 </li>
                 <li>
-                    <a href="#">Activity</a>
+                    <a href="!#">Activity</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="!#">Contact</a>
                 </li>
                 <div className="primary-btn">GET CONNECTED</div>
             </ul>
