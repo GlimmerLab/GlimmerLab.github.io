@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "GlimmerLab",
   tagline: "GLIMMER",
-  url: "https://wiki.7wate.com",
+  url: " https://glimmerlab.github.io/",
   baseUrl: "/",
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "log",
@@ -41,7 +41,7 @@ const config = {
         },
         blog: {
           blogTitle: "GlimmerLab`s Wiki",
-          blogDescription: "7Wate 的个人生活和工作记录",
+          blogDescription: "GlimmerLab 的点点滴滴",
           blogSidebarCount: 7,
           blogSidebarTitle: "近期文章",
           showReadingTime: true,
