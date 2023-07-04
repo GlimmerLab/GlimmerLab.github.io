@@ -81,7 +81,9 @@ const config = {
 
   // -----------------------------------------------------------------------------------
 
-
+  themeConfig:
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  ({
 
   navbar: {
     title: "📚 GlimmerLab's Wiki",
@@ -122,6 +124,7 @@ const config = {
       mermaid: {
         theme: {light: 'neutral', dark: 'forest'},
       },
+    }),
     markdown: {
       mermaid: true,
     },
