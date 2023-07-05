@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  // organizationName: '7wate', // Usually your GitHub org/user name.
-  // projectName: 'wiki', // Usually your repo name.
+  organizationName: 'GlimmerLab', // Usually your GitHub org/user name.
+  projectName: 'GlimmerLab.github.io', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -119,7 +119,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         defaultLanguage: "markdown",
-        additionalLanguages: ["java", "git","nginx","http"],
+        additionalLanguages: ["cpp", "git","python","http"],
       },
       mermaid: {
         theme: {light: 'neutral', dark: 'forest'},
