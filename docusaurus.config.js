@@ -41,7 +41,7 @@ const config = {
         },
         blog: {
           blogTitle: "GlimmerLab`s Wiki",
-          blogDescription: "GlimmerLab 的点点滴滴",
+          blogDescription: "唯爱与科技不可辜负",
           blogSidebarCount: 7,
           blogSidebarTitle: "近期文章",
           showReadingTime: true,
@@ -105,15 +105,14 @@ const config = {
 
 
   algolia: {
-    apiKey: "59ecd12cf4f3a8b7313b2626c8d0344e",
+    apiKey: "17999108327feb19d97000f130a2486d",
     appId: "PV5TEG1FGV",
     indexName: "wiki",
   },
 
   footer: {
     style: "dark",
-    copyright: `Copyright © ${new Date().getFullYear()
-  } LJoson, Inc.Built with <a href="https://www.docusaurus.cn/" target="_blank" rel="noopener noreferrer">Docusaurus</a>.< br > Powered by < a href = "https://webify.cloudbase.net/" target = "_blank" rel = "noopener noreferrer" > CloudBase Webify</a > `,
+    copyright: `Copyright © ${new Date().getFullYear()}LJoson, Inc.Built with <a href="https://www.docusaurus.cn/" target="_blank" rel="noopener noreferrer">Docusaurus</a>. `,
       },
       prism: {
         theme: lightCodeTheme,

@@ -13,19 +13,19 @@ const svgList = [
     title: 'github',
     Svg: require('../../static/img/github.svg').default,
     color: 'black',
-    link: 'https://github.com/7Wate/wiki',
+    link: 'https://github.com/GlimmerLab',
   },
-  {
-    title: 'bilibili',
-    Svg: require('../../static/img/bilibili.svg').default,
-    link: 'https://space.bilibili.com/223211771',
-  },
-  {
-    title: 'wechat',
-    Svg: require('../../static/img/wechat.svg').default,
-    color: '#2979ff',
-    link: 'https://static.7wate.com/img/2022/06/16/d6dfd36f35293.jpg',
-  },
+  // {
+  //   // title: 'bilibili',
+  //   // Svg: require('../../static/img/bilibili.svg').default,
+  //   // link: 'https://space.bilibili.com/223211771',
+  // },
+  // {
+  //   // title: 'wechat',
+  //   // Svg: require('../../static/img/wechat.svg').default,
+  //   // color: '#2979ff',
+  //   // link: 'https://static.7wate.com/img/2022/06/16/d6dfd36f35293.jpg',
+  // },
 ]
 const Svg = ({ Svg, color, title, link }) => {
   return (
@@ -57,12 +57,13 @@ function MyHero() {
     <div className={styles.myHeroContainer}>
       <div className={styles.leftContainer}>
         <h1 className={styles.leftContainer_h1}>
-          Always <br /> For Freedom.
+          Always <br /> For Dream.
         </h1>
         <p className={styles.leftContainer_p}>
-          一个喜欢异想天开的家伙 💨
+          时间太瘦，指尖太宽 💨
           <br />
-          在这里记录知识，希望对你也有帮助。
+          愿在此相遇的我们初心未变，追梦脚步不止~
+
         </p>
         <div className={styles.buttonContainer}>
           {/* <button className={styles.button}>
