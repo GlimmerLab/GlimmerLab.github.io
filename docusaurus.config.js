@@ -45,7 +45,7 @@ const config = {
           blogSidebarCount: 7,
           blogSidebarTitle: "近期文章",
           showReadingTime: true,
-          // editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+          editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
           feedOptions: {
             title: "GlimmerLab`s Wiki",
             description: "GlimmerLab`s Wiki",
@@ -112,7 +112,7 @@ const config = {
 
   footer: {
     style: "dark",
-    copyright: `Copyright © ${new Date().getFullYear()}LJoson, Inc.Built with <a href="https://www.docusaurus.cn/" target="_blank" rel="noopener noreferrer">Docusaurus</a>. `,
+    copyright: `Copyright © ${new Date().getFullYear()} GlimmerLab, Inc.Built with <a href="https://www.docusaurus.cn/" target="_blank" rel="noopener noreferrer">Docusaurus</a>. `,
       },
       prism: {
         theme: lightCodeTheme,
