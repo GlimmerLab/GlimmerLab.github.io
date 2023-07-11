@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "GlimmerLab",
   tagline: "GLIMMER",
-  url: " https://glimmerlab.github.io/",
+  url: " https://glimmerlab.top/",
   baseUrl: "/",
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "log",
