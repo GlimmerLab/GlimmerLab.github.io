@@ -62,7 +62,7 @@ function MyHero() {
         <p className={styles.leftContainer_p}>
           唯爱与科技不可辜负 💨
           <br />
-          愿在此相遇的我们初心未变，追梦脚步不止~
+          时间太瘦，指尖太宽，愿在此相遇的我们初心未变，追梦脚步不止~
 
         </p>
         <div className={styles.buttonContainer}>
