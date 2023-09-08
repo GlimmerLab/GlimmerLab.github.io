@@ -39,13 +39,13 @@ const config = {
           showLastUpdateTime: true,
           breadcrumbs: false,
         },
-        projects: {
+        blog: {
           blogTitle: "GlimmerLab`s Wiki",
           blogDescription: "唯爱与科技不可辜负",
           blogSidebarCount: 7,
           blogSidebarTitle: "近期文章",
           showReadingTime: true,
-          editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+          // editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
           feedOptions: {
             title: "GlimmerLab`s Wiki",
             description: "GlimmerLab`s Wiki",
@@ -98,7 +98,7 @@ const config = {
     //   height: 32,
     // },
     items: [
-      { to: "/projects", label: "👨🏻‍🌾 项目", position: "right" },
+      { to: "/blog", label: "👨🏻‍🌾 文档汇总", position: "right" },
 
     ],
   },
