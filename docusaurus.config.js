@@ -107,7 +107,7 @@ const config = {
   algolia: {
     apiKey: "17999108327feb19d97000f130a2486d",
     appId: "PV5TEG1FGV",
-    indexName: "wiki",
+    indexName: "glimmerlabwiki",
   },
 
   footer: {
@@ -118,7 +118,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         defaultLanguage: "markdown",
-        additionalLanguages: ["cpp", "git","python","http"],
+        additionalLanguages: ["cpp", "git","python","shell"],
       },
       mermaid: {
         theme: {light: 'neutral', dark: 'forest'},
