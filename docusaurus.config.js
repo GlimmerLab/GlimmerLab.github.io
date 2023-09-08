@@ -39,7 +39,7 @@ const config = {
           showLastUpdateTime: true,
           breadcrumbs: false,
         },
-        blog: {
+        projects: {
           blogTitle: "GlimmerLab`s Wiki",
           blogDescription: "唯爱与科技不可辜负",
           blogSidebarCount: 7,
