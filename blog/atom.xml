@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id> https://glimmerlab.top/blog</id>
+    <title>GlimmerLab`s Wiki</title>
+    <updated>2023-09-08T13:55:58.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href=" https://glimmerlab.top/blog"/>
+    <subtitle>GlimmerLab`s Wiki</subtitle>
+    <icon> https://glimmerlab.top/img/favicon.ico</icon>
+    <rights>Copyright © 2023 GlimmerLab, Inc.</rights>
+    <entry>
+        <title type="html"><![CDATA[Home]]></title>
+        <id> https://glimmerlab.top/blog/</id>
+        <link href=" https://glimmerlab.top/blog/"/>
+        <updated>2023-09-08T13:55:58.000Z</updated>
+        <summary type="html"><![CDATA[记录一下 ~]]></summary>
+    </entry>
+</feed>
