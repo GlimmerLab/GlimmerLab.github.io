@@ -1,6 +1,6 @@
 # Glimmerlab Wiki Knowledge Base
 
-> Always For Freedom.
+>  Just do it !
 > Time is thin, fingertips are wide, cherish the present 💨
 
 👉👉👉 [中文文档](README.md)

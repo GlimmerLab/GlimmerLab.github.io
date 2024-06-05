@@ -1,6 +1,6 @@
 # Glimmerlab wiki 知识库
 
-> Always For Freedom.
+>  Just do it !
 > 时间太瘦，指尖太宽，且行且珍惜  💨
 
 👉👉👉 [English README](README_EN.md)
