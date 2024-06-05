@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwiki=self.webpackChunkwiki||[]).push([[533],{8017:e=>{e.exports=JSON.parse('{"permalink":"/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"\u552f\u7231\u4e0e\u79d1\u6280\u4e0d\u53ef\u8f9c\u8d1f","blogTitle":"GlimmerLab`s Wiki"}')}}]);

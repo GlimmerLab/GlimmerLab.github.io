@@ -4,16 +4,16 @@
         <title>GlimmerLab`s Wiki</title>
         <link> https://glimmerlab.top/blog</link>
         <description>GlimmerLab`s Wiki</description>
-        <lastBuildDate>Fri, 08 Sep 2023 13:55:58 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 05 Jun 2024 18:38:23 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hans</language>
-        <copyright>Copyright © 2023 GlimmerLab, Inc.</copyright>
+        <copyright>Copyright © 2024 GlimmerLab, Inc.</copyright>
         <item>
             <title><![CDATA[Home]]></title>
             <link> https://glimmerlab.top/blog/</link>
             <guid> https://glimmerlab.top/blog/</guid>
-            <pubDate>Fri, 08 Sep 2023 13:55:58 GMT</pubDate>
+            <pubDate>Wed, 05 Jun 2024 18:38:23 GMT</pubDate>
             <description><![CDATA[记录一下 ~]]></description>
         </item>
     </channel>
