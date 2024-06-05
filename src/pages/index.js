@@ -57,10 +57,10 @@ function MyHero() {
     <div className={styles.myHeroContainer}>
       <div className={styles.leftContainer}>
         <h1 className={styles.leftContainer_h1}>
-          Always <br /> For Dream.
+          Just <br /> do it !
         </h1>
         <p className={styles.leftContainer_p}>
-          唯爱与科技不可辜负 💨
+          唯热爱与科技不可辜负 💨
           <br />
           时间太瘦，指尖太宽，愿在此相遇的我们初心未变，追梦脚步不止~
 
@@ -93,7 +93,7 @@ export default function Home() {
     <Layout
       // title={`${siteConfig.title}`}
       title='Home'
-      description='Wiki知识库/vscode/javascript/软件/工具'>
+      description='GlimmerLab'>
       {/* <HomepageHeader /> */}
       <Head>
       // 百度

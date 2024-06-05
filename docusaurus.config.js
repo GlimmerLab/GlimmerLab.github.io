@@ -41,7 +41,7 @@ const config = {
         },
         blog: {
           blogTitle: "GlimmerLab`s Wiki",
-          blogDescription: "唯爱与科技不可辜负",
+          blogDescription: "唯热爱与科技不可辜负",
           blogSidebarCount: 7,
           blogSidebarTitle: "近期文章",
           showReadingTime: true,
