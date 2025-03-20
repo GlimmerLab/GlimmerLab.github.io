@@ -1,0 +1,161 @@
+/* 设置全局样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    scroll-behavior: smooth;
+  }
+
+  /* 头部导航优化 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* 确保 nav 不会溢出 */
+  nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* 确保导航栏项不会超出屏幕 */
+  nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap; /* 避免超出时换行 */
+    padding: 0;
+    margin: 0;
+  }
+
+  /* 确保每个 `li` 不会被挤压 */
+  nav ul li {
+    padding: 10px 15px;
+  }
+
+  /* 让 `a` 标签有合理的点击区域 */
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* 避免文本换行 */
+  }
+
+  nav ul li a:hover {
+    color: #00c6ff;
+  }
+  /* 修复跳转被遮挡的问题 */
+  #research, #projects {
+    scroll-margin-top: 80px; /* 避免被 header 遮挡 */
+  }
+
+  /* 主内容容器 */
+  main {
+    min-height: 100vh; /* 确保主内容填充页面 */
+    padding-top: 80px; /* 避免与固定导航重叠 */
+  }
+
+  /* Hero 部分 */
+  .hero {
+    text-align: center;
+    padding: 150px 20px;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1b1b1b 100%);
+  }
+
+  .glimmerlab-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #00c6ff;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+
+  .cta-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #00c6ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background: #007bff;
+    transform: scale(1.1);
+  }
+
+  /* Research & Projects (左右排列) */
+  .info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 10%;
+  }
+
+  .info-box {
+    width: 45%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+  }
+
+  .research {
+    text-align: left;
+  }
+
+  .projects {
+    text-align: right;
+  }
+
+  /* 动画 */
+  .fade-in-left {
+    transform: translateX(-50px);
+  }
+
+  .fade-in-right {
+    transform: translateX(50px);
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }

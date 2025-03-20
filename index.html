@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlimmerLab - AI & Robotics</title>
+  <link rel="icon" href="/static/images/glimmerlab.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/index_styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">GlimmerLab</div>
+    <nav>
+      <ul>
+        <li><a href="/" data-key="home">Home</a></li>
+        <li><a href="#research" data-key="research">Research</a></li>
+        <li><a href="#projects" data-key="projects">Projects</a></li>
+        <li><a href="/model_converter" data-key="convert">Model Converter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="glimmerlab-title">GlimmerLab</div>
+        <h1 data-key="heroTitle">AI and Advancing Robotics</h1>
+        <p data-key="heroSubtitle">Exploring AI applications and locomotion, manipulation.</p>
+        <button class="cta-button" onclick="location.href='/model_converter'" data-key="convertModel">Convert Models Now</button>
+      </div>
+    </section>
+
+    <!-- Research & Projects (左右布局) -->
+    <section class="info-container">
+      <div class="info-box research fade-in-left" id="research">
+        <h2 data-key="researchTitle">Our Research</h2>
+        <p data-key="researchDesc">We focus on chip architecture and design, network, compiler, AI engineering deployment and optimization, large language model and other technical fields.
+          Technology and art are integrated, theory and practice go hand in hand, and game design and aesthetic research are shared at the same time.
+          Equally improve life with technology and create a better future together</p>
+      </div>
+
+      <div class="info-box projects fade-in-right" id="projects">
+        <h2 data-key="projectsTitle">Projects</h2>
+        <p data-key="projectsDesc">From robotics to deep reinforcement learning, explore the world of AGI through projects and experience cutting-edge technology applications.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="company-info">
+        <p>&copy; 2024 GlimmerLab inc. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <!-- <a href="https://www.linkedin.com/company/glimmerlab" target="_blank">LinkedIn</a>
+        <a href="https://docs.glimmerlab.com" target="_blank">Docs</a> -->
+        <a href="https://github.com/glimmerlab" target="_blank">GitHub</a>
+        <!-- <a href="https://www.youtube.com/channel/glimmerlab" target="_blank">YouTube</a>
+        <a href="https://discord.gg/glimmerlab" target="_blank">Discord</a> -->
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="/static/js/index.js"></script>
+</body>
+</html>

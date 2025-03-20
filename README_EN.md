@@ -1,19 +1,19 @@
-# Glimmerlab Wiki Knowledge Base
+# Glimmerlab
 
->  Just do it !
-> Time is thin, fingertips are wide, cherish the present 💨
+🌐️ [English](README.md) | [中文](README_CN.md)
 
-👉👉👉 [中文文档](README.md)
+—— The wind starts from the tip of the green duckweed, and the waves form from the ripples
 
+> Exploring Cutting-Edge Technologies, Experiencing the Beauty of Technology
 
-## CI/CD
+## Interactive and Perceptual Intelligent Technologies
 
-- build.yml: Automatically builds the static website from the main branch and deploys it to the html branch.
+Focusing on research on vision and NLP foundational models, developing universal AI algorithm architectures, including content generation, multimodal understanding, digital human technology, and other human-computer interaction key technologies.
 
-## Contributions
+## Program Design and Compilers
 
-Contributions and guidance for corrections are welcome. 👊
+Meeting the compilation needs of domain-specific architectures and languages, supporting privacy-computing accelerated chips, and forming software-hardware integrated optimization capabilities.
 
-## License
+## Robotics
 
-- **
+## Chips and Systems

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | GlimmerLab</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            margin-top: 10%;
+        }
+        .error-icon {
+            font-size: 80px;
+            color: #e74c3c;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .back-home {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #3498db;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-home:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="/">GlimmerLab</a></div>
+        <nav>
+            <ul>
+                <li><a href="/" data-key="home">Home</a></li>
+                <li><a href="/pages/model_converter" data-key="convert">Model Converter</a></li>
+
+                <!-- Supported Frameworks 下拉菜单 -->
+                <li class="dropdown">
+                    <a href="#" data-key="frameworks">Supported Frameworks ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://example.com/frameworks/ncnn" target="_blank">NCNN</a></li>
+                        <li><a href="https://example.com/frameworks/onnx" target="_blank">ONNX</a></li>
+                        <li><a href="https://example.com/frameworks/tensorflow" target="_blank">TensorFlow</a></li>
+                        <li><a href="https://example.com/frameworks/pytorch" target="_blank">PyTorch</a></li>
+                    </ul>
+                </li>
+
+                <!-- Supported Models 下拉菜单 -->
+                <li class="dropdown">
+                    <a href="#" data-key="models_zoo">Supported Models ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://example.com/models/resnet" target="_blank">ResNet</a></li>
+                        <li><a href="https://example.com/models/yolov8" target="_blank">YOLO</a></li>
+                        <li><a href="https://example.com/models/bert" target="_blank">BERT</a></li>
+                        <li><a href="https://example.com/models/stable-diffusion" target="_blank">Stable Diffusion</a></li>
+                    </ul>
+                </li>
+
+                <!-- Privacy Policy 下拉菜单 -->
+                <li class="dropdown">
+                    <a href="#" data-key="privacy">Privacy Policy ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/privacy-policy" target="_blank">View Privacy Policy</a></li>
+                        <li><a href="/privacy-policy#data-collection" target="_blank">Data Collection</a></li>
+                        <li><a href="/privacy-policy#cookies" target="_blank">Cookies</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <select id="language">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="error-icon">🚫</div>
+            <h1>404 - Page Not Found</h1>
+            <p>The page you are looking for does not exist or has been moved.</p>
+            <a href="/" class="back-home">Go Back Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GlimmerLab. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // 可选功能：5秒后自动跳转回首页
+        setTimeout(() => {
+            window.location.href = "/";
+        }, 5000);
+    </script>
+</body>
+</html>

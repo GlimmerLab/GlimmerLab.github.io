@@ -1,21 +1,19 @@
-# Glimmerlab wiki 知识库
+# Glimmerlab
 
->  Just do it !
-> 时间太瘦，指尖太宽，且行且珍惜  💨
+🌐️ [English](README.md) | [中文](README_CN.md)
 
-👉👉👉 [English README](README_EN.md)
+—— 风起于青萍之末，浪成于微澜之间
 
+> 探索前沿科技,体验技术之美
 
-## CI&CD
+## 交互与感知智能技术
 
- - build.yml：main 分支自动构建静态网站，并部署至 html 分支。
+聚焦视觉和NLP基础模型研究，开发通用人工智能算法架构，包括内容生成、多模态理解、数字人技术等人机交互关键技术。
 
-## 贡献
+## 程序设计与编译器
 
-欢迎各位 Fork 贡献，并提供指导纠错。 👊
+面向领域特定架构和语言的编译需求，支持隐私计算加速芯片，形成软硬件一体优化能力。
 
-## 协议
+## 机器人
 
-- **Docusaurus** is [MIT licensed.](https://github.com/facebook/docusaurus/blob/main/LICENSE)
-
-
+## 芯片与系统

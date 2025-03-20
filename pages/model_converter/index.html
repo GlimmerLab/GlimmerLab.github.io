@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Converter - GlimmerLab</title>
+  <link rel="icon" href="/static/images/glimmerlab.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/model_converter.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="/">GlimmerLab</a></div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="/" data-key="home">Home</a></li>
+
+        <!-- Supported Frameworks 下拉菜单 -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-key="frameworks">Supported Frameworks ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="https://github.com/Tencent/ncnn" target="_blank">NCNN</a></li>
+            <!-- <li><a href="https://github.com/scarsty/cccc-lite" target="_blank">CCCC</a></li> -->
+            <!-- <li><a href="https://example.com/frameworks/onnx" target="_blank">ONNX</a></li>
+            <li><a href="https://example.com/frameworks/tensorflow" target="_blank">TensorFlow</a></li>
+            <li><a href="https://example.com/frameworks/pytorch" target="_blank">PyTorch</a></li> -->
+          </ul>
+        </li>
+
+        <!-- Supported Models 下拉菜单 -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-key="models_zoo">Supported Models ▼</a>
+          <ul class="dropdown-menu">
+            <!-- <li><a href="https://example.com/models/resnet" target="_blank">ResNet</a></li> -->
+            <li><a href="https://github.com/ultralytics/ultralytics" target="_blank">YOLO</a></li>
+            <!-- <li><a href="https://example.com/models/bert" target="_blank">BERT</a></li>
+            <li><a href="https://example.com/models/stable-diffusion" target="_blank">Stable Diffusion</a></li> -->
+          </ul>
+        </li>
+
+        <!-- Privacy Policy 下拉菜单 -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-key="privacy">Privacy Policy ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="/privacy-policy" target="_blank">View Privacy Policy</a></li>
+            <li><a href="/privacy-policy/data-collection" target="_blank">Data Collection</a></li>
+            <li><a href="/privacy-policy/cookies" target="_blank">Cookies</a></li>
+          </ul>
+        </li>
+
+        <!-- Community 下拉菜单 -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-key="community">Community ▼</a>
+          <ul class="dropdown-menu">
+            <li>
+              QQ Group: <a href="https://jq.qq.com/?_wv=1027&k=816888420" target="_blank">816888420</a>
+            </li>
+            <!-- <li><a href="mailto:support@example.com">Email: support@example.com</a></li>
+            <li><a href="https://twitter.com/example" target="_blank">Twitter: @example</a></li> -->
+            <li><a href="https://github.com/glimmerlab" target="_blank">GitHub: github.com/glimmerlab</a></li>
+          </ul>
+        </li>
+        <li>
+          <select id="language-selector">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <!-- 🔥 新增警告框 -->
+      <div class="warning-box" id="privacy-warning" data-key="privacyWarning">
+        ⚠️ This service does not store uploaded models. If concerned, please use it with caution!⚠️
+      </div>
+
+      <div class="modelflow-title">ModelFlow</div>
+      <h1 data-key="heroTitle">Convert Your Deep Learning Models with Ease</h1>
+      <p data-key="heroSubtitle">Seamlessly convert models between various frameworks like PyTorch, ONNX and more.</p>
+      <button class="cta-button" id="start-btn" data-key="startConverting">Start Converting</button>
+
+      <!-- Error/Info Popup -->
+      <div id="error-popup" class="error-popup" style="display: none;">
+        <p id="error-message" data-key="error-message">Please upload a model!</p>
+      </div>
+
+      <!-- Progress Bar -->
+      <div id="progress-container" class="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <!-- Download Button (Initially Hidden) -->
+      <button id="download-btn" class="download-button" style="display: none;" data-key="downloadModel">
+        Download Converted Model
+      </button>
+    </div>
+  </section>
+
+  <section class="upload-section">
+    <div class="upload-box">
+      <h2 data-key="uploadModel">Upload Your Model</h2>
+      <input type="file" id="model-upload" />
+      <label for="model-upload" data-key="chooseFile">Choose a Model File</label>
+    </div>
+    <div class="selector-parameter-container">
+      <!-- 框架选择器 -->
+      <div class="framework-selector">
+        <h2 data-key="selectFramework">Select Target Framework</h2>
+        <select id="framework-selector">
+          <option value="ncnn" data-key="ncnn">NCNN</option>
+          <!-- <option value="onnx" data-key="onnx">ONNX</option> -->
+        </select>
+      </div>
+
+      <!-- 参数控制模块 -->
+      <div class="parameter-control">
+        <h2 data-key="controlParameters">Control Parameters</h2>
+        <div class="parameter-group">
+          <label for="input-shapes" data-key="inputShapes">Input Shapes:</label>
+          <input type="text" id="input-shapes"
+            placeholder="e.g., [1, 3, 640, 640] or [[1, 3, 224, 224], [1, 1, 28, 28]]" value="[1, 3, 640, 640]" />
+        </div>
+
+        <div class="parameter-group">
+          <label for="input-types" data-key="inputTypes">Input Types:</label>
+          <input type="text" id="input-types" placeholder="e.g., f32 or [f32, f16]" value="f32" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="error-popup" class="error-popup" style="display: none;">
+    <p id="error-message"></p>
+    <button id="close-error-popup">Close</button>
+  </div>
+  <footer>
+    <p>&copy; 2024 ModelFlow. All rights reserved.</p>
+  </footer>
+
+  <script src="/static/js/model_converter.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>
