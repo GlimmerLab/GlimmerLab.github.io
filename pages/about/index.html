@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - GlimmerLab</title>
+    <link rel="icon" href="/static/images/glimmerlab.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/index_styles.css">
+    <link rel="stylesheet" href="/static/css/about_styles.css">
+    <style>
+        /* 添加新的样式 */
+        .about-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            color: #2c3e50;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .about-intro {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-intro:hover {
+            transform: translateY(-5px);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-card i {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .culture-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .culture-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .culture-item i {
+            font-size: 2.5rem;
+            color: #2ecc71;
+            margin-bottom: 1rem;
+        }
+
+        .about-mission {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: linear-gradient(135deg, #3498db 0%, #2ecc71 100%);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-team {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        /* 添加动画效果 */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .value-card i, .culture-item i {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* 响应式设计优化 */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-intro, .about-mission, .about-team {
+                padding: 1.5rem;
+                margin: 2rem 1rem;
+            }
+
+            .values-grid, .culture-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="/static/images/logos/GlimmerLab.png" alt="GlimmerLab Logo">
+                <span>GlimmerLab</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/" class="nav-link" data-key="home">首页</a></li>
+                    <li><a href="/#research" class="nav-link" data-key="research">研究方向</a></li>
+                    <li><a href="/#projects" class="nav-link" data-key="projects">项目展示</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            工具与应用
+                            <i class="bi bi-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/model_converter">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                    模型转换器
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/career-helper">
+                                    <i class="bi bi-briefcase"></i>
+                                    职多多
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/paper-reader">
+                                    <i class="bi bi-journal-text"></i>
+                                    今日Paper
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <button class="theme-toggle" aria-label="切换主题">
+                    <i class="bi bi-moon"></i>
+                </button>
+                <button class="language-toggle" aria-label="切换语言">
+                    <i class="bi bi-translate"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="菜单">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- 关于我们内容 -->
+        <section class="about-section">
+            <div class="container">
+                <h1 class="section-title" data-aos="fade-up">关于 GlimmerLab</h1>
+
+                <div class="about-content" data-aos="fade-up">
+                    <div class="about-intro">
+                        <h2>我们的故事</h2>
+                        <p>GlimmerLab 的灵感源于《英雄联盟：双城之战》中微光的故事。正如微光既危险又充满希望，我们相信科技同样具有改变命运的双重力量。以"点燃微光，照亮未来"为核心理念，我们致力于将创新的力量注入现实世界，为默默前行的伙伴们尽些许绵薄之力。</p>
+                    </div>
+
+                    <div class="about-values">
+                        <h2>核心价值观</h2>
+                        <div class="values-grid">
+                            <div class="value-card">
+                                <i class="bi bi-lightbulb"></i>
+                                <h3>以科技为光</h3>
+                                <p>追求突破边界的技术，释放每一个隐藏在日常生活中的可能性</p>
+                            </div>
+                            <div class="value-card">
+                                <i class="bi bi-people"></i>
+                                <h3>平等与赋能</h3>
+                                <p>致力于为所有人提供公平的机会，帮助每个人找到属于自己的微光</p>
+                            </div>
+                            <div class="value-card">
+                                <i class="bi bi-shield-check"></i>
+                                <h3>责任与反思</h3>
+                                <p>深刻理解科技的力量，同时关注其对社会的长远影响</p>
+                            </div>
+                            <div class="value-card">
+                                <i class="bi bi-arrow-repeat"></i>
+                                <h3>共生创新</h3>
+                                <p>强调科技与人性的平衡，推动不同领域的协同发展</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-culture">
+                        <h2>企业文化</h2>
+                        <div class="culture-grid">
+                            <div class="culture-item">
+                                <i class="bi bi-brave"></i>
+                                <h3>勇敢探索</h3>
+                                <p>鼓励团队勇于冒险，拥抱挑战与不确定性，用拼搏实践的态度面对未来</p>
+                            </div>
+                            <div class="culture-item">
+                                <i class="bi bi-lightning"></i>
+                                <h3>无畏边界</h3>
+                                <p>不拘泥于规则与传统，敢于突破既定的模式，以创造性思维解决现实问题</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-mission">
+                        <h2>使命与愿景</h2>
+                        <p>GlimmerLab 的使命是成为现代社会中的"微光"，为每一位勇敢的探索者提供工具与灵感。我们希望通过科技连接每个小小自我与未来，创造一个充满希望与可能性的世界。在我们看来，每一次微小的技术进步都可以点燃改变世界的星火；每一次对未知的追逐，都是对人类潜力的致敬。</p>
+                    </div>
+
+                    <div class="about-team">
+                        <h2>研究团队</h2>
+                        <p>作为充满激情的团队，我们始终致力于将前沿技术转化为实际应用。无论你是技术专家、创意设计师，还是对未来充满好奇的普通人，GlimmerLab 都希望成为你的伙伴，与你一起点燃微光，照亮未来。我们也期待志同道合的伙伴加入，共同探索科技的无限可能。</p>
+                    </div>
+
+                    <div class="about-contact">
+                        <h2>联系我们</h2>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="bi bi-envelope"></i>
+                                <p>邮箱：junli440883@gmail.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <p>地址：浙江省杭州市萧山区</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="bi bi-github"></i>
+                                <p>GitHub：<a href="https://github.com/glimmerlab" target="_blank">github.com/glimmerlab</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4><a href="/about" style="color: inherit; text-decoration: none;">关于我们</a></h4>
+                    <p>GlimmerLab--风起于青萍之末，浪成于微澜之间</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="/career-helper">职多多</a></li>
+                        <li><a href="/paper-reader">今日Paper</a></li>
+                        <li><a href="/model_converter">模型转换器</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://github.com/glimmerlab" target="_blank">
+                                <i class="bi bi-github"></i>
+                                GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GlimmerLab Inc. All rights reserved.</p>
+                <p>
+                    <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2023127478号-2</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" aria-label="返回顶部">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="/static/js/index.js"></script>
+    <script>
+        // 初始化 AOS 动画
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // 添加滚动动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            });
+
+            document.querySelectorAll('.value-card, .culture-item, .contact-item').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

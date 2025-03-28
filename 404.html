@@ -1,114 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | GlimmerLab</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <title>404 - 页面未找到 | ModelFlow</title>
+    <link rel="icon" href="/static/images/glimmerlab.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --text-color: #2c3e50;
+            --bg-color: #f5f7fa;
+            --header-bg: rgba(255, 255, 255, 0.95);
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #2980b9;
+            --secondary-color: #3498db;
+            --text-color: #ecf0f1;
+            --bg-color: #2c3e50;
+            --header-bg: rgba(44, 62, 80, 0.95);
+        }
+
         body {
+            margin: 0;
+            padding: 0;
             text-align: center;
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background: linear-gradient(135deg, var(--bg-color) 0%, #c3cfe2 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
+
+        header {
+            background: var(--header-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            margin: 0 1rem;
+        }
+
+        .nav-menu a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-controls {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-controls button {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-controls button:hover {
+            color: var(--primary-color);
+        }
+
         .container {
-            margin-top: 10%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            animation: fadeIn 0.8s ease-in-out;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .error-icon {
-            font-size: 80px;
-            color: #e74c3c;
+            font-size: 120px;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
         }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+
         h1 {
-            font-size: 36px;
+            font-size: 48px;
             margin: 20px 0;
+            color: var(--text-color);
+            font-weight: 700;
         }
+
         p {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: var(--text-color);
+            max-width: 600px;
+            line-height: 1.6;
         }
+
         .back-home {
             display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 15px 30px;
+            font-size: 18px;
             color: #fff;
-            background-color: #3498db;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
         }
+
         .back-home:hover {
-            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        footer {
+            padding: 1.5rem;
+            background: var(--header-bg);
+            color: var(--text-color);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .language-selector {
+            margin-left: 1rem;
+        }
+
+        .language-selector select {
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--text-color);
+            background: var(--header-bg);
+            color: var(--text-color);
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo"><a href="/">GlimmerLab</a></div>
-        <nav>
-            <ul>
-                <li><a href="/" data-key="home">Home</a></li>
-                <li><a href="/pages/model_converter" data-key="convert">Model Converter</a></li>
-
-                <!-- Supported Frameworks 下拉菜单 -->
-                <li class="dropdown">
-                    <a href="#" data-key="frameworks">Supported Frameworks ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="https://example.com/frameworks/ncnn" target="_blank">NCNN</a></li>
-                        <li><a href="https://example.com/frameworks/onnx" target="_blank">ONNX</a></li>
-                        <li><a href="https://example.com/frameworks/tensorflow" target="_blank">TensorFlow</a></li>
-                        <li><a href="https://example.com/frameworks/pytorch" target="_blank">PyTorch</a></li>
-                    </ul>
-                </li>
-
-                <!-- Supported Models 下拉菜单 -->
-                <li class="dropdown">
-                    <a href="#" data-key="models_zoo">Supported Models ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="https://example.com/models/resnet" target="_blank">ResNet</a></li>
-                        <li><a href="https://example.com/models/yolov8" target="_blank">YOLO</a></li>
-                        <li><a href="https://example.com/models/bert" target="_blank">BERT</a></li>
-                        <li><a href="https://example.com/models/stable-diffusion" target="_blank">Stable Diffusion</a></li>
-                    </ul>
-                </li>
-
-                <!-- Privacy Policy 下拉菜单 -->
-                <li class="dropdown">
-                    <a href="#" data-key="privacy">Privacy Policy ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/privacy-policy" target="_blank">View Privacy Policy</a></li>
-                        <li><a href="/privacy-policy#data-collection" target="_blank">Data Collection</a></li>
-                        <li><a href="/privacy-policy#cookies" target="_blank">Cookies</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <select id="language">
-                        <option value="en">English</option>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="/static/images/logos/GlimmerLab.png" alt="GlimmerLab Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="/" data-key="home">首页</a></li>
+                    <li><a href="/model_converter" data-key="modelConverter">模型转换器</a></li>
+                    <li><a href="/paper-reader" data-key="paperReader">今日Paper</a></li>
+                    <li><a href="/career-helper" data-key="careerHelper">职多多</a></li>
+                </ul>
+            </nav>
+            <div class="nav-controls">
+                <button class="theme-toggle" title="切换主题">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="language-selector">
+                    <select id="language-selector">
                         <option value="zh">中文</option>
+                        <option value="en">English</option>
                     </select>
-                </li>
-            </ul>
-        </nav>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
         <div class="container">
-            <div class="error-icon">🚫</div>
-            <h1>404 - Page Not Found</h1>
-            <p>The page you are looking for does not exist or has been moved.</p>
-            <a href="/" class="back-home">Go Back Home</a>
+            <div class="error-icon">🤔</div>
+            <h1 data-key="error404Title">哎呀！页面找不到了</h1>
+            <p data-key="error404Message">看来您要找的页面已经离家出走了。别担心，让我们一起回到首页继续探索吧！</p>
+            <a href="/" class="back-home" data-key="backToHome">返回首页</a>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 GlimmerLab. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2024 ModelFlow. <span data-key="allRightsReserved">All rights reserved.</span></p>
+        </div>
     </footer>
 
     <script>
-        // 可选功能：5秒后自动跳转回首页
-        setTimeout(() => {
-            window.location.href = "/";
-        }, 5000);
+        // 多语言支持
+        const translations = {
+            en: {
+                home: "Home",
+                modelConverter: "Model Converter",
+                paperReader: "Today's Paper",
+                careerHelper: "Career Helper",
+                error404Title: "Oops! Page Not Found",
+                error404Message: "It seems the page you're looking for has gone on an adventure. Don't worry, let's head back to the homepage and continue exploring!",
+                backToHome: "Back to Home",
+                allRightsReserved: "All rights reserved."
+            },
+            zh: {
+                home: "首页",
+                modelConverter: "模型转换器",
+                paperReader: "今日Paper",
+                careerHelper: "职多多",
+                error404Title: "哎呀！页面找不到了",
+                error404Message: "看来您要找的页面已经离家出走了。别担心，让我们一起回到首页继续探索吧！",
+                backToHome: "返回首页",
+                allRightsReserved: "版权所有"
+            }
+        };
+
+        // 语言切换
+        document.getElementById("language-selector").addEventListener("change", (event) => {
+            const selectedLanguage = event.target.value;
+            const textElements = document.querySelectorAll("[data-key]");
+            textElements.forEach(el => {
+                const key = el.getAttribute("data-key");
+                if (translations[selectedLanguage][key]) {
+                    el.textContent = translations[selectedLanguage][key];
+                }
+            });
+        });
+
+        // 主题切换
+        function initTheme() {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            updateThemeIcon(theme);
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
+
+        function updateThemeIcon(theme) {
+            const icon = document.querySelector('.theme-toggle i');
+            icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            initTheme();
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        });
+
+        // 倒计时重定向
+        const countdown = 5;
+        let timeLeft = countdown;
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            const backButton = document.querySelector('.back-home');
+            if (timeLeft > 0) {
+                backButton.textContent = `${translations[document.getElementById('language-selector').value].backToHome} (${timeLeft}秒)`;
+            } else {
+                clearInterval(timer);
+                window.location.href = "/";
+            }
+        }, 1000);
     </script>
 </body>
 </html>

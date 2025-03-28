@@ -1,150 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Model Converter - GlimmerLab</title>
+  <title data-i18n="modelConverterTitle">模型转换器</title>
   <link rel="icon" href="/static/images/glimmerlab.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/model_converter.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+  <!-- 隐私提示 -->
+  <div class="privacy-warning" data-i18n="privacyWarning">
+    ⚠️ 本服务不会保存上传的模型，有顾虑的小伙伴请谨慎使用！
+  </div>
+
+  <!-- 头部导航 -->
   <header>
-    <div class="logo"><a href="/">GlimmerLab</a></div>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="/" data-key="home">Home</a></li>
-
-        <!-- Supported Frameworks 下拉菜单 -->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-key="frameworks">Supported Frameworks ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="https://github.com/Tencent/ncnn" target="_blank">NCNN</a></li>
-            <!-- <li><a href="https://github.com/scarsty/cccc-lite" target="_blank">CCCC</a></li> -->
-            <!-- <li><a href="https://example.com/frameworks/onnx" target="_blank">ONNX</a></li>
-            <li><a href="https://example.com/frameworks/tensorflow" target="_blank">TensorFlow</a></li>
-            <li><a href="https://example.com/frameworks/pytorch" target="_blank">PyTorch</a></li> -->
-          </ul>
-        </li>
-
-        <!-- Supported Models 下拉菜单 -->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-key="models_zoo">Supported Models ▼</a>
-          <ul class="dropdown-menu">
-            <!-- <li><a href="https://example.com/models/resnet" target="_blank">ResNet</a></li> -->
-            <li><a href="https://github.com/ultralytics/ultralytics" target="_blank">YOLO</a></li>
-            <!-- <li><a href="https://example.com/models/bert" target="_blank">BERT</a></li>
-            <li><a href="https://example.com/models/stable-diffusion" target="_blank">Stable Diffusion</a></li> -->
-          </ul>
-        </li>
-
-        <!-- Privacy Policy 下拉菜单 -->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-key="privacy">Privacy Policy ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="/privacy-policy" target="_blank">View Privacy Policy</a></li>
-            <li><a href="/privacy-policy/data-collection" target="_blank">Data Collection</a></li>
-            <li><a href="/privacy-policy/cookies" target="_blank">Cookies</a></li>
-          </ul>
-        </li>
-
-        <!-- Community 下拉菜单 -->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-key="community">Community ▼</a>
-          <ul class="dropdown-menu">
-            <li>
-              QQ Group: <a href="https://jq.qq.com/?_wv=1027&k=816888420" target="_blank">816888420</a>
-            </li>
-            <!-- <li><a href="mailto:support@example.com">Email: support@example.com</a></li>
-            <li><a href="https://twitter.com/example" target="_blank">Twitter: @example</a></li> -->
-            <li><a href="https://github.com/glimmerlab" target="_blank">GitHub: github.com/glimmerlab</a></li>
-          </ul>
-        </li>
-        <li>
-          <select id="language-selector">
-            <option value="en">English</option>
-            <option value="zh">中文</option>
-          </select>
-        </li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="/">
+          <img src="/static/images/logos/GlimmerLab.png" alt="GlimmerLab Logo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/" data-i18n="home">首页</a></li>
+          <li><a href="/paper-reader" data-i18n="paperReader">今日Paper</a></li>
+          <li><a href="/career-helper" data-i18n="careerHelper">职多多</a></li>
+          <li><a href="/about" data-i18n="about">关于我们</a></li>
+        </ul>
+      </nav>
+      <div class="nav-controls">
+        <button class="theme-toggle" title="切换主题">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="language-toggle" title="切换语言">
+          <i class="fas fa-globe"></i>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <!-- 🔥 新增警告框 -->
-      <div class="warning-box" id="privacy-warning" data-key="privacyWarning">
-        ⚠️ This service does not store uploaded models. If concerned, please use it with caution!⚠️
+  <main>
+    <!-- 英雄区域 -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="modelflow-title" data-i18n="modelConverterTitle">模型转换器</h1>
+        <p class="hero-subtitle" data-i18n="modelConverterSubtitle">轻松转换深度学习模型</p>
+      </div>
+    </section>
+
+    <!-- 上传区域 -->
+    <section class="upload-section">
+      <!-- 文件上传 -->
+      <div class="upload-box">
+        <h2 data-i18n="uploadModel">上传模型</h2>
+        <p class="supported-formats" data-i18n="supportedFormats">支持的格式：ONNX, PyTorch, TensorFlow</p>
+        <label class="upload-label" for="model-upload">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <span data-i18n="chooseFile">选择模型文件</span>
+        </label>
+        <input type="file" id="model-upload" accept=".onnx,.pt,.pth,.h5,.pb">
+        <div class="file-info" style="display: none;">
+          <div class="file-name"></div>
+          <div class="file-size"></div>
+        </div>
       </div>
 
-      <div class="modelflow-title">ModelFlow</div>
-      <h1 data-key="heroTitle">Convert Your Deep Learning Models with Ease</h1>
-      <p data-key="heroSubtitle">Seamlessly convert models between various frameworks like PyTorch, ONNX and more.</p>
-      <button class="cta-button" id="start-btn" data-key="startConverting">Start Converting</button>
-
-      <!-- Error/Info Popup -->
-      <div id="error-popup" class="error-popup" style="display: none;">
-        <p id="error-message" data-key="error-message">Please upload a model!</p>
-      </div>
-
-      <!-- Progress Bar -->
-      <div id="progress-container" class="progress-container">
-        <div id="progress-bar" class="progress-bar"></div>
-      </div>
-
-      <!-- Download Button (Initially Hidden) -->
-      <button id="download-btn" class="download-button" style="display: none;" data-key="downloadModel">
-        Download Converted Model
-      </button>
-    </div>
-  </section>
-
-  <section class="upload-section">
-    <div class="upload-box">
-      <h2 data-key="uploadModel">Upload Your Model</h2>
-      <input type="file" id="model-upload" />
-      <label for="model-upload" data-key="chooseFile">Choose a Model File</label>
-    </div>
-    <div class="selector-parameter-container">
-      <!-- 框架选择器 -->
+      <!-- 框架选择 -->
       <div class="framework-selector">
-        <h2 data-key="selectFramework">Select Target Framework</h2>
-        <select id="framework-selector">
-          <option value="ncnn" data-key="ncnn">NCNN</option>
-          <!-- <option value="onnx" data-key="onnx">ONNX</option> -->
+        <h2 data-i18n="selectFramework">选择目标框架</h2>
+        <select id="framework-select">
+          <option value="ncnn">NCNN</option>
+          <!-- 暂时注释掉其他选项
+          <option value="tflite">TFLite</option>
+          <option value="onnx">ONNX</option>
+          -->
         </select>
       </div>
 
-      <!-- 参数控制模块 -->
+      <!-- 参数控制 -->
       <div class="parameter-control">
-        <h2 data-key="controlParameters">Control Parameters</h2>
+        <h2 data-i18n="controlParameters">控制参数</h2>
         <div class="parameter-group">
-          <label for="input-shapes" data-key="inputShapes">Input Shapes:</label>
-          <input type="text" id="input-shapes"
-            placeholder="e.g., [1, 3, 640, 640] or [[1, 3, 224, 224], [1, 1, 28, 28]]" value="[1, 3, 640, 640]" />
+          <label for="input-shapes" data-i18n="inputShapes">输入形状</label>
+          <input type="text" id="input-shapes" placeholder="例如: [1,3,640,640]" value="[1,3,640,640]">
         </div>
-
         <div class="parameter-group">
-          <label for="input-types" data-key="inputTypes">Input Types:</label>
-          <input type="text" id="input-types" placeholder="e.g., f32 or [f32, f16]" value="f32" />
+          <label for="input-types" data-i18n="inputTypes">输入类型</label>
+          <input type="text" id="input-types" placeholder="例如: f32" value="f32">
         </div>
       </div>
+    </section>
+
+    <!-- 开始转换按钮 -->
+    <div class="convert-button-container">
+      <button id="start-btn" class="convert-btn" data-i18n="startConverting">
+        <i class="fas fa-sync-alt"></i>
+        <span data-i18n="startConverting">开始转换</span>
+      </button>
     </div>
-  </section>
-  <div id="error-popup" class="error-popup" style="display: none;">
-    <p id="error-message"></p>
-    <button id="close-error-popup">Close</button>
-  </div>
+
+    <!-- 进度显示 -->
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+      <div class="progress-message"></div>
+    </div>
+
+    <!-- 下载按钮 -->
+    <a id="download-btn" class="download-btn" style="display: none;" data-i18n="downloadModel">
+      <i class="fas fa-download"></i>
+      <span data-i18n="downloadModel">下载转换后的模型</span>
+    </a>
+
+    <!-- 下载进度 -->
+    <div class="download-progress">
+      <div class="download-progress-bar"></div>
+      <div class="download-progress-text"></div>
+    </div>
+
+    <!-- 错误提示 -->
+    <div id="error-popup" class="error-popup">
+        <button id="close-error-popup" class="close-button">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="error-content"></div>
+    </div>
+  </main>
+
+  <!-- 页脚 -->
   <footer>
-    <p>&copy; 2024 ModelFlow. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4><a href="/about" data-i18n="aboutUs">关于我们</a></h4>
+          <p>GlimmerLab--风起于青萍之末，浪成于微澜之间</p>
+        </div>
+        <div class="footer-section">
+          <h4 data-i18n="quickLinks">快速链接</h4>
+          <ul>
+            <li><a href="/paper-reader" data-i18n="paperReader">今日Paper</a></li>
+            <li><a href="/career-helper" data-i18n="careerHelper">职多多</a></li>
+            <li><a href="/model_converter" data-i18n="modelConverter">模型转换器</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 data-i18n="contact">联系方式</h4>
+          <ul class="social-links">
+            <li>
+              <a href="https://github.com/glimmerlab" target="_blank">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 GlimmerLab Inc. All rights reserved.</p>
+        <p>
+          <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2023127478号-2</a>
+        </p>
+      </div>
+    </div>
   </footer>
 
+  <script src="/static/js/i18n.js"></script>
   <script src="/static/js/model_converter.js"></script>
-  <script>
-
-  </script>
 </body>
 
 </html>

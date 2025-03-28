@@ -1,68 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GlimmerLab - AI & Robotics</title>
-  <link rel="icon" href="/static/images/glimmerlab.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/css/index_styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlimmerLab - 智能科技实验室</title>
+    <link rel="icon" href="/static/images/glimmerlab.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/index_styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">GlimmerLab</div>
-    <nav>
-      <ul>
-        <li><a href="/" data-key="home">Home</a></li>
-        <li><a href="#research" data-key="research">Research</a></li>
-        <li><a href="#projects" data-key="projects">Projects</a></li>
-        <li><a href="/model_converter" data-key="convert">Model Converter</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="/static/images/logos/GlimmerLab.png" alt="GlimmerLab Logo">
+                <span>GlimmerLab</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/" class="nav-link active" data-key="home">首页</a></li>
+                    <li><a href="#research" class="nav-link" data-key="research">研究方向</a></li>
+                    <li><a href="#projects" class="nav-link" data-key="projects">项目展示</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            工具与应用
+                            <i class="bi bi-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/model_converter">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                    模型转换器
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/career-helper">
+                                    <i class="bi bi-briefcase"></i>
+                                    职多多
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/paper-reader">
+                                    <i class="bi bi-journal-text"></i>
+                                    今日Paper
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <button class="theme-toggle" aria-label="切换主题">
+                    <i class="bi bi-moon"></i>
+                </button>
+                <button class="language-toggle" aria-label="切换语言">
+                    <i class="bi bi-translate"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="菜单">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <div class="glimmerlab-title">GlimmerLab</div>
-        <h1 data-key="heroTitle">AI and Advancing Robotics</h1>
-        <p data-key="heroSubtitle">Exploring AI applications and locomotion, manipulation.</p>
-        <button class="cta-button" onclick="location.href='/model_converter'" data-key="convertModel">Convert Models Now</button>
-      </div>
-    </section>
+    <main>
+        <!-- 首屏区域 -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="glimmerlab-title" data-aos="fade-up">
+                    GlimmerLab
+                    <span class="subtitle">智能科技实验室</span>
+                </h1>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                    探索AI应用与机器人技术的未来
+                </p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#projects" class="primary-button">
+                        <i class="bi bi-rocket"></i>
+                        探索项目
+                    </a>
+                    <a href="/model_converter" class="secondary-button">
+                        <i class="bi bi-tools"></i>
+                        使用工具
+                    </a>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="particles"></div>
+            </div>
+        </section>
 
-    <!-- Research & Projects (左右布局) -->
-    <section class="info-container">
-      <div class="info-box research fade-in-left" id="research">
-        <h2 data-key="researchTitle">Our Research</h2>
-        <p data-key="researchDesc">We focus on chip architecture and design, network, compiler, AI engineering deployment and optimization, large language model and other technical fields.
-          Technology and art are integrated, theory and practice go hand in hand, and game design and aesthetic research are shared at the same time.
-          Equally improve life with technology and create a better future together</p>
-      </div>
+        <!-- 研究方向 -->
+        <section class="research-section" id="research">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">研究方向</h2>
+                <div class="research-grid">
+                    <div class="research-card" data-aos="fade-up">
+                        <i class="bi bi-cpu"></i>
+                        <h3>芯片架构与设计</h3>
+                        <p>探索新一代AI芯片架构，优化计算效率</p>
+                    </div>
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="bi bi-diagram-3"></i>
+                        <h3>网络与编译优化</h3>
+                        <p>深度学习框架优化，提升模型性能</p>
+                    </div>
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="bi bi-robot"></i>
+                        <h3>机器人技术</h3>
+                        <p>研究运动控制与机器人操作技术</p>
+                    </div>
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-chat-square-text"></i>
+                        <h3>大语言模型</h3>
+                        <p>探索大规模语言模型应用与优化</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="info-box projects fade-in-right" id="projects">
-        <h2 data-key="projectsTitle">Projects</h2>
-        <p data-key="projectsDesc">From robotics to deep reinforcement learning, explore the world of AGI through projects and experience cutting-edge technology applications.</p>
-      </div>
-    </section>
-  </main>
+        <!-- 项目展示 -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">特色项目</h2>
+                <div class="projects-grid">
+                    <!-- 求职助手 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="/static/images/logos/career-helper.png" alt="职多多">
+                        </div>
+                        <div class="project-content">
+                            <h3>职多多</h3>
+                            <p>为求职者提供全方位的智能支持</p>
+                            <ul class="feature-list">
+                                <li><i class="bi bi-book"></i> 专业知识库</li>
+                                <li><i class="bi bi-robot"></i> AI智能辅导</li>
+                                <li><i class="bi bi-card-text"></i> 知识卡片</li>
+                                <li><i class="bi bi-translate"></i> 双语学习</li>
+                            </ul>
+                            <a href="/career-helper" class="project-button">
+                                立即体验
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
 
-  <footer>
-    <div class="footer-content">
-      <div class="company-info">
-        <p>&copy; 2024 GlimmerLab inc. All rights reserved.</p>
-      </div>
-      <div class="footer-links">
-        <!-- <a href="https://www.linkedin.com/company/glimmerlab" target="_blank">LinkedIn</a>
-        <a href="https://docs.glimmerlab.com" target="_blank">Docs</a> -->
-        <a href="https://github.com/glimmerlab" target="_blank">GitHub</a>
-        <!-- <a href="https://www.youtube.com/channel/glimmerlab" target="_blank">YouTube</a>
-        <a href="https://discord.gg/glimmerlab" target="_blank">Discord</a> -->
-      </div>
+                    <!-- 论文阅读器 -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="/static/images/logos/paper-reader1.png" alt="今日Paper">
+                        </div>
+                        <div class="project-content">
+                            <h3>今日Paper</h3>
+                            <p>提升学术研究效率的智能工具</p>
+                            <ul class="feature-list">
+                                <li><i class="bi bi-translate"></i> 实时翻译</li>
+                                <li><i class="bi bi-highlighter"></i> 智能标注</li>
+                                <li><i class="bi bi-cloud-arrow-down"></i> 自动获取</li>
+                                <li><i class="bi bi-pencil-square"></i> 笔记系统</li>
+                            </ul>
+                            <a href="/paper-reader" class="project-button">
+                                开始阅读
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 模型转换器 -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="/static/images/logos/modelflow.png" alt="模型转换器">
+                        </div>
+                        <div class="project-content">
+                            <h3>深度学习模型转换器</h3>
+                            <p>便捷的模型格式转换工具</p>
+                            <ul class="feature-list">
+                                <li><i class="bi bi-arrow-repeat"></i> 多格式支持</li>
+                                <li><i class="bi bi-lightning"></i> 快速转换</li>
+                                <li><i class="bi bi-gear"></i> 参数优化</li>
+                                <li><i class="bi bi-shield-check"></i> 准确性验证</li>
+                            </ul>
+                            <a href="/model_converter" class="project-button">
+                                开始转换
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4><a href="/about" style="color: inherit; text-decoration: none;">关于我们</a></h4>
+                    <p>GlimmerLab-风起于青萍之末，浪成于微澜之间</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="/career-helper">职多多</a></li>
+                        <li><a href="/paper-reader">今日Paper</a></li>
+                        <li><a href="/model_converter">模型转换器</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://github.com/glimmerlab" target="_blank">
+                                <i class="bi bi-github"></i>
+                                GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GlimmerLab Inc. All rights reserved.</p>
+                <p>
+                    <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2023127478号-2</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 加载动画 -->
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
     </div>
-  </footer>
 
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" aria-label="返回顶部">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
-  <script src="/static/js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="/static/js/index.js"></script>
 </body>
 </html>
+
+
